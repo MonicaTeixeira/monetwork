@@ -1,6 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 
+export interface User {
+  "username": string
+  "email": string
+  "password": string
+}
+
+
 @Component({
   selector: 'app-newuser',
   templateUrl: './newuser.component.html',
@@ -8,19 +15,19 @@ import { Component } from '@angular/core';
 })
 export class NewuserComponent {
 
-  username!: string
-  email!: string
-  password!: string
+  users: User[] = []
+  newUsers: User = {
+    username: '',
+    email: '',
+    password: ''
+  }
 
   constructor(private http: HttpClient) { }
 
   register() {
-    const username = this.username
-    const email = this.email
-    const password = this.password
-
-    const newUser = { username, email, password }
     
+    
+  
   }
 
 }

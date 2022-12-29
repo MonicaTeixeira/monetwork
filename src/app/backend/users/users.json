@@ -8,5 +8,20 @@
     "username": "maria",
     "email": "maria@gmail.com",
     "password": "abc"
+  },
+  {
+    "username": "joao",
+    "email": "joao@gmail.com",
+    "password": "123"
+  },
+  {
+    "username": "claudia",
+    "email": "claudia@gmail.com",
+    "password": "1234"
+  },
+  {
+    "username": "lara",
+    "email": "lara@gmail.com",
+    "password": "1234"
   }
 ]
