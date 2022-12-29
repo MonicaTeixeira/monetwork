@@ -24,10 +24,17 @@ export class NewuserComponent {
 
   constructor(private http: HttpClient) { }
 
-  register() {
+    register() {
+      this.http.post('http://localhost:3000/users', this.newUsers)
+        .subscribe((response) => {
+          console.log(response);
+          // manipule a resposta do servidor, por exemplo, mostre uma mensagem ao usuário
+        }, (error) => {
+          console.error(error);
+          // manipule o erro, por exemplo, mostre uma mensagem de erro ao usuário
+        });
+    }
     
-    
-  
   }
 
-}
+

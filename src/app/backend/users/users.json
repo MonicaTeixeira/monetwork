@@ -9,6 +9,8 @@
     "email": "maria@gmail.com",
     "password": "abc"
   },
+  {},
+  {},
   {
     "username": "joao",
     "email": "joao@gmail.com",
@@ -23,5 +25,15 @@
     "username": "lara",
     "email": "lara@gmail.com",
     "password": "1234"
+  },
+  {
+    "username": "teste",
+    "email": "teste@teste",
+    "password": "123"
+  },
+  {
+    "username": "teste",
+    "email": "teste@teste",
+    "password": "123"
   }
 ]
