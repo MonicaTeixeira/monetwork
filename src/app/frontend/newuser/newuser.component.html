@@ -9,7 +9,7 @@
           <div class="row g-0">
             <div class="d-flex mr-auto align-items-center">
               <div class="card-body p-4 p-lg-5 text-black">
-                <form #loginForm="ngForm">
+                <form #form="ngForm">
                   <div class="text-center">
                     <i
                       class="fas fa-cubes fa-2x me-3"
@@ -31,27 +31,37 @@
                       id="form1"
                       class="form-control form-control-lg"
                       placeholder="Insira seu nome"
-                      required
                       [(ngModel)]="newUsers.username"
                       name="username"
+                      pattern="[a-zA-Z ]*.{4,}"
+                      #name="ngModel"
+                      required
                     />
+                    <div *ngIf="name.invalid && name.touched" class="error-message">
+                      O campo de nome é obrigatório, no mínimo 4 caracteres
+                    </div>
                   </div>
 
                   <div class="form-outline mb-4">
-                    <label class="form-label" for="form2Example17">Email</label>
+                    <label class="form-label" for="form2">Email</label>
                     <input
                       type="email"
                       id="form2"
                       class="form-control form-control-lg"
                       placeholder="Insira seu e-mail"
-                      required
                       [(ngModel)]="newUsers.email"
                       name="email"
+                      pattern="[a-z0-9]{1,}@[a-z]{1,}.[a-z]{2,}" 
+                      #email="ngModel"
+                      required
                     />
+                    <div *ngIf="email.invalid && email.touched" class="error-message">
+                      Por favor, insira um e-mail válido. Ex: exemplo@exemplo.com
+                    </div>
                   </div>
 
                   <div class="form-outline mb-4">
-                    <label class="form-label" for="form2Example27"
+                    <label class="form-label" for="form3"
                       >Password</label
                     >
                     <input
@@ -59,10 +69,15 @@
                       id="form3"
                       class="form-control form-control-lg"
                       placeholder="Palavra passe nova"
-                      required
                       [(ngModel)]="newUsers.password"
                       name="password"
+                      pattern=".{4,}" 
+                      #password="ngModel"
+                      required
                     />
+                    <div *ngIf="password.invalid && password.touched" class="error-message">
+                      A senha deve ter no mínimo 4 caracteres
+                    </div>
                   </div>
 
                   <div class="pt-1 mb-4 text-center">
@@ -70,6 +85,7 @@
                       (click)="register()"
                       class="btlog btn btn-lg btn-block"
                       type="submit"
+                      [disabled]="!form.valid"
                     >
                       Regista-te
                     </button>
