@@ -9,7 +9,7 @@
           <div class="row g-0">
             <div class="d-flex mr-auto align-items-center">
               <div class="card-body p-4 p-lg-5 text-black">
-                <form #form="ngForm">
+                <form #form="ngForm" action="/register" method="POST">
                   <div class="text-center">
                     <i
                       class="fas fa-cubes fa-2x me-3"
@@ -93,7 +93,7 @@
                     <button
                       routerLink="/login"
                       class="btlog btn btn-lg btn-block"
-                      type="submit"
+                      type="button"
                     >
                       Sair
                     </button>

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-const baseUrl = 'http://localhost:3000/users'
+const baseUrl = 'http://localhost:3000/login'
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +14,7 @@ export class AuthService {
     const data = JSON.stringify({ email, password });
     return this.http.post<AuthResponse>(baseUrl, data);
   }
+  
 }
 
 interface AuthResponse {

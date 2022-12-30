@@ -24,7 +24,7 @@ export class LoginComponent {
       const password = loginForm.value.password;
       this.authService.login(email, password).subscribe(response => { 
         if (response.success) {
-          console.log('MENSAGEM SENDO ENVIADA') 
+          console.log('MENSAGEM SENDO ENVIADA')
           this.router.navigate(['/perfil']);
         } else {
           console.error('Error logging in');
@@ -38,24 +38,3 @@ export class LoginComponent {
 
 
 
-
-
-// Enviar formulário para o servidor de autenticação
-  //     this.http.post<AuthResponse>('/login', loginForm.value)
-  //       .subscribe((response: AuthResponse) => {
-  //         console.log('cliente enviando ao servidor')
-  //         if (response.success) {
-  //           // Armazene as informações de autenticação do usuário
-  //           this.router.navigate(['/perfil']);
-  //         } else {
-  //           // Exiba uma mensagem de erro para o usuário
-  //           alert('E-mail ou senha inválidos. Por favor, tente novamente.')
-  //         }
-  //       },
-  //       error => {
-  //         console.error('Erro ao fazer login:', error);
-  //         // Exibir mensagem de erro para o usuário
-  //         alert('Ocorreu um erro ao tentar fazer login. Por favor, tente novamente mais tarde.');
-  //       })
-  //   } else {
-  //     Exibir mensagem de er

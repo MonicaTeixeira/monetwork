@@ -9,26 +9,40 @@
     "email": "maria@gmail.com",
     "password": "12345"
   },
+  {
+    "username": "teste",
+    "email": "teste@teste.com",
+    "password": "4321"
+  },
+  {
+    "username": "teste2",
+    "email": "teste2@teste.com",
+    "password": "1234"
+  },
   {},
-  {},
-  {},
-  {},
-  {},
-  {},
-  {},
-  {},
-  {},
-  {},
-  {},
-  {},
-  {},
-  {},
-  {},
-  {},
-  {},
-  {},
-  {},
-  {},
-  {},
-  {}
+  {
+    "username": "test",
+    "email": "test@test.com",
+    "password": "12345"
+  },
+  {
+    "username": "sara",
+    "email": "sara@gmail.com",
+    "password": "4321"
+  },
+  {
+    "username": "maria",
+    "email": "maria@gmail.com",
+    "password": "3333"
+  },
+  {
+    "username": "teste",
+    "email": "teste@teste",
+    "password": "1212"
+  },
+  {
+    "username": "novoteste",
+    "email": "novoteste@teste.com",
+    "password": "1111"
+  }
 ]
