@@ -23,6 +23,7 @@ export class LoginComponent {
       const email = loginForm.value.email;
       const password = loginForm.value.password;
       this.authService.login(email, password).subscribe(response => { 
+        console.log(response)
         if (response.success) {
           console.log('MENSAGEM SENDO ENVIADA')
           this.router.navigate(['/perfil']);

@@ -40,6 +40,7 @@ server.post('/login', (req, res) => {
   const email = req.body.email;
   const password = req.body.password;
   const validUser = users.find(user => user.email === email && user.password === password);
+  console.log(validUser)
 
   if (validUser) {
     // O usuário forneceu dados de login válidos
