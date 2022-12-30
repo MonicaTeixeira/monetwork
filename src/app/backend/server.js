@@ -22,7 +22,6 @@ server.get('/', (req, res) => {
 server.get('/users', (req, res) => {
     res.send(users)
 })
-
 server.post('/users', (req, res) => {
 
     const newUsers = req.body;

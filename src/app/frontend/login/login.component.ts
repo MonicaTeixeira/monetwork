@@ -9,11 +9,16 @@ import { NgForm } from '@angular/forms';
 })
 export class LoginComponent {
 
-  login(form: NgForm) {
-    // Obter os valores de email e senha do formulário e enviar para o servidor de autenticação
-    const email = form.value.email
-    const password = form.value.password
-    alert("Ola seja bem vindo!")
-}
+  login(loginForm: NgForm) {
+    if (loginForm.valid) {
+      // Enviar formulário para o servidor de autenticação
+      const email = loginForm.value.email
+      const password = loginForm.value.password
+    } else {
+      // Exibir mensagem de erro para o usuário
+      alert('Por favor, preencha todos os campos obrigatórios e verifique se o formulário está correto.')
+    }
+  }
+  
 
 }

@@ -33,23 +33,37 @@
                   <div class="form-outline mb-4">
                     <input
                       type="email"
-                      id="form2Example17"
+                      id="form1"
                       class="form-control form-control-lg"
                       placeholder="Insira seu e-mail"
+                      [(ngModel)]="loginForm.value.email"
+                      name="email"
+                      pattern="[a-z0-9]{1,}@[a-z]{1,}.[a-z]{2,}" 
+                      #email="ngModel"
                       required
                     />
-                    <label class="form-label" for="form2Example17">Email</label>
+                    <div *ngIf="email.invalid && email.touched" class="error-message">
+                      Por favor, insira um e-mail válido. Ex: exemplo@exemplo.com
+                    </div>
+                    <label class="form-label" for="form1">Email</label>
                   </div>
 
                   <div class="form-outline mb-4">
                     <input
                       type="password"
-                      id="form2Example27"
+                      id="form2"
                       class="form-control form-control-lg"
                       placeholder="Insira sua palavra passe"
+                      [(ngModel)]="loginForm.value.password"
+                      name="password"
+                      pattern=".{4,}" 
+                      #password="ngModel"
                       required
                     />
-                    <label class="form-label" for="form2Example27"
+                    <div *ngIf="password.invalid && password.touched" class="error-message">
+                      A senha deve ter no mínimo 4 caracteres
+                    </div>
+                    <label class="form-label" for="form2"
                       >Password</label
                     >
                   </div>
