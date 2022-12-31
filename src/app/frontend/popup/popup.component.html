@@ -1,0 +1,18 @@
+<div class="modal" tabindex="-1" role="dialog" style="display: block ;" *ngIf="isShowing">
+    <!-- Faz com que a vista não mostre até ser true no popup.component.ts-->
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">{{title}}</h4>
+        </div>
+        <div class="modal-body">
+          <h6>{{body}}</h6>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" (click)="closePopup()">
+            Ok
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>

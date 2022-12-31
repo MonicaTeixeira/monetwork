@@ -10,11 +10,6 @@
     "password": "12345"
   },
   {
-    "username": "teste",
-    "email": "teste@teste.com",
-    "password": "4321"
-  },
-  {
     "username": "teste2",
     "email": "teste2@teste.com",
     "password": "1234"
@@ -31,11 +26,6 @@
     "password": "4321"
   },
   {
-    "username": "maria",
-    "email": "maria@gmail.com",
-    "password": "3333"
-  },
-  {
     "username": "teste",
     "email": "teste@teste",
     "password": "1212"
@@ -44,5 +34,15 @@
     "username": "novoteste",
     "email": "novoteste@teste.com",
     "password": "1111"
+  },
+  {
+    "username": "ivan",
+    "email": "ivan@gmail.com",
+    "password": "1114"
+  },
+  {
+    "username": "Caio",
+    "email": "caio@gmail.com",
+    "password": "1313"
   }
 ]

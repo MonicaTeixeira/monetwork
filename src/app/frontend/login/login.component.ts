@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
+import { PopupComponent } from '../popup/popup.component';
 
 interface AuthResponse {
   success: boolean;
@@ -14,6 +15,9 @@ interface AuthResponse {
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
+
+  @ViewChild('popup_login') popup_login!: PopupComponent
+
   constructor(private authService: AuthService, private router: Router) {}  
 
   login(loginForm: NgForm) { 
@@ -25,10 +29,10 @@ export class LoginComponent {
       this.authService.login(email, password).subscribe(response => { 
         console.log(response)
         if (response.success) {
-          console.log('MENSAGEM SENDO ENVIADA')
           this.router.navigate(['/perfil']);
         } else {
           console.error('Error logging in');
+          this.popup_login.openPopup()
         }
       });
     } else {

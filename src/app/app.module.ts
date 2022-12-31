@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './frontend/login/login.component';
 import { PerfilComponent } from './frontend/perfil/perfil.component';
 import { NewuserComponent } from './frontend/newuser/newuser.component';
+import { PopupComponent } from './frontend/popup/popup.component';
 
 
 
@@ -17,6 +18,7 @@ import { NewuserComponent } from './frontend/newuser/newuser.component';
     LoginComponent,
     PerfilComponent,
     NewuserComponent,
+    PopupComponent,
   ],
   imports: [
     BrowserModule,
