@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-perfil',
@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class PerfilComponent {
   
+  @Input() name: string = ''
+
+  
+
 }
