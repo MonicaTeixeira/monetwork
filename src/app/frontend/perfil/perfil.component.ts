@@ -7,7 +7,7 @@ import { Component, Input, ViewChild } from '@angular/core';
 })
 export class PerfilComponent {
   
-  @Input() name: string = ''
+
 
   
 
